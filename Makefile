@@ -28,5 +28,5 @@ clean:
 ## build: builds binary for Windows
 build:
 	@echo "Building binaries for Windows x64 ..."; \
-		GOOS=windows GOARCH=amd64 go build -ldflags=${LDFLAGS} ${GCFLAGS} ${ASMFLAGS} \
+		GOOS=windows GOARCH=amd64 garble build -ldflags=${LDFLAGS} ${GCFLAGS} ${ASMFLAGS} \
 			-o ${BUILD_PATH}/${PROJ_NAME}.exe ${ENTRYPOINT} || exit 1; \
